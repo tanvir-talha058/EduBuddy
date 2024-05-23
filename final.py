@@ -74,7 +74,7 @@ if __name__ == "__main__":
             path = "C:\\Program Files\\Google\Chrome\\Application\\chrome.exe"
             os.startfile(path)
 
-        if "open microsoft word" in query:
+        elif "open microsoft word" in query:
             speak("Opening microsoft word....")
             path = "C:\\Program Files\Microsoft Office\\root\Office16\\WINWORD.EXE"
             os.startfile(path)
