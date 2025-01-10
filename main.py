@@ -28,6 +28,7 @@ def takecommand():
         return "none"
     return query
 
+
 if __name__=="__main__":
     takecommand()
     speak("Hi Tanvir , This is Edu-Buddy.. How can i help you?")
