@@ -5,7 +5,8 @@ import datetime
 import os
 import wikipedia
 import webbrowser
-
+
+
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
@@ -137,7 +138,6 @@ if __name__ == "__main__":
             webbrowser.open(f"{cm}")
 
 
-
         elif "learn python" in query:
             speak("You can easily learn python programming language from here..")
             webbrowser.open("https://www.w3schools.com/python/")
@@ -215,9 +215,6 @@ if __name__ == "__main__":
 
         elif "Suggest movie" in query:
             speak("You must should watch  the movie named The Pursuit of Happiness")
-
-
-
 
         if 'exit' in query:
             speak("Goodbye")
