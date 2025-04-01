@@ -210,9 +210,6 @@ if __name__ == "__main__":
                      and Technology and
                      M.Sc from Bangladesh University of Engineering and Technology.""")
 
-
-
-
         elif "Suggest movie" in query:
             speak("You must should watch  the movie named The Pursuit of Happiness")
 
