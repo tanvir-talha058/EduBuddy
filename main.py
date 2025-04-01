@@ -11,6 +11,7 @@ def speak(audio):
     print(audio)
     engine.runAndWait()
 
+
 def takecommand():
     r = sr.Recognizer()
     with sr.Microphone as source:
