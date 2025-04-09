@@ -1,4 +1,5 @@
 # EduBuddy
+
 Edu-Buddy is a voice-activated assistant designed to support students in their academic and
 personal life. Similar to other virtual assistants like Google Assistant or Siri. Edu-Buddy is
 tailored specifically for educational use. It provides functionalities such as reminders for
