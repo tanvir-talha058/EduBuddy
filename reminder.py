@@ -5,7 +5,6 @@ import wikipedia
 import time
 import webbrowser
 
-
 def speak(audio):
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
