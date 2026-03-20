@@ -18,6 +18,7 @@ def takecommand():
         audio = r.listen(source,timeout=1, phrase_time_limit=5)
 
 
+
     try:
         print("Recognizing...")
         query= r.recognize_google_cloud(audio, language='en-in')
