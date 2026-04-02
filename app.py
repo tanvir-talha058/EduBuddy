@@ -430,15 +430,18 @@ class EduBuddyApp(ctk.CTk):
         self._add_message(text, "assistant")
         threading.Thread(target=self._tts.speak, args=(text,), daemon=True).start()
 
+    _STATUS_LEVELS = ("success", "warning", "error", "info")
+
     def _set_status(self, label: str, level: str = "success"):
-        colour_map = {
-            "success": C["success"],
-            "warning": C["warning"],
-            "error":   C["error"],
-            "info":    C["accent"],
+        colour_keys = {
+            "success": "success",
+            "warning": "warning",
+            "error":   "error",
+            "info":    "accent",
         }
-        self._status_dot.configure(text_color=colour_map.get(level, C["success"]))
-        self._status_label.configure(text=label)
+        key = colour_keys.get(level, "success")
+        self._status_dot.configure(text_color=C[key])
+        self._status_label.configure(text=label)  # noqa: W0612 (level defined above)
 
     # ── Event Handlers ────────────────────────────────────────────────────────
 
@@ -480,7 +483,7 @@ class EduBuddyApp(ctk.CTk):
                 recognizer.adjust_for_ambient_noise(source, duration=0.5)
                 audio = recognizer.listen(source, timeout=6, phrase_time_limit=8)
 
-            self._set_status("Recognising…", "info")
+            self._set_status("Recognizing…", "info")
             query = recognizer.recognize_google(audio, language="en-in")
             self._add_message(query, "user")
             self._process(query.lower())
