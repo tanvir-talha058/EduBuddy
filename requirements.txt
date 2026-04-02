@@ -1,0 +1,17 @@
+# EduBuddy — requirements
+
+# GUI framework
+customtkinter>=5.2.0
+
+# Text-to-Speech
+pyttsx3>=2.90
+
+# Speech recognition
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13
+
+# Wikipedia search
+wikipedia>=1.4.0
+
+# (optional) Camera access — used by final.py
+opencv-python>=4.8.0
